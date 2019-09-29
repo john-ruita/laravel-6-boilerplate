@@ -5,26 +5,17 @@
 @section('content')
 {{ html()->form('PATCH', route('admin.auth.user.change-password.post', $user))->class('form-horizontal')->open() }}
     <div class="card card-primary card-outline">
+        <div class="card-header">
+            <h4 class="card-title mb-0">
+                @lang('labels.backend.access.users.management')
+                <small class="text-muted">@lang('labels.backend.access.users.change_password_for', ['user' => $user->name])</small>
+            </h4>
+            <div class="card-tools">
+                @include('backend.auth.user.includes.breadcrumb-links')
+            </div>
+        </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-sm-8">
-                    <h4 class="card-title mb-0">
-                        @lang('labels.backend.access.users.management')
-                        <small class="text-muted">@lang('labels.backend.access.users.change_password')</small>
-                    </h4>
-
-                    <div class="small text-muted">
-                        @lang('labels.backend.access.users.change_password_for', ['user' => $user->name])
-                    </div>
-                </div>
-                <div class="col-sm-7">
-                    @include('backend.auth.user.includes.breadcrumb-links')
-                </div>
-            </div><!--row-->
-
-            <hr />
-
-            <div class="row mt-4 mb-4">
                 <div class="col">
                     <div class="form-group row">
                         {{ html()->label(__('validation.attributes.backend.access.users.password'))->class('col-md-2 form-control-label')->for('password') }}

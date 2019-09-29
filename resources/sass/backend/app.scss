@@ -12,3 +12,13 @@
     padding-top: map-get($spacers, 3);
     padding-bottom: map-get($spacers, 3);
 }
+
+.nav-sidebar .nav-header {
+    padding: 0.5rem !important;
+}
+
+// card tools buttons
+.card-tools .btn:not(.btn-tool){
+    margin: -0.75rem 0;
+}
+

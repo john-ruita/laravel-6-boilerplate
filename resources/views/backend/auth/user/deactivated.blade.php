@@ -4,20 +4,17 @@
 
 @section('content')
 <div class="card card-primary card-outline">
+    <div class="card-header">
+        <h4 class="card-title mb-0">
+            @lang('labels.backend.access.users.management')
+            <small class="text-muted">@lang('labels.backend.access.users.deactivated')</small>
+        </h4>
+        <div class="card-tools">
+            @include('backend.auth.user.includes.breadcrumb-links')
+        </div><!--col-->
+    </div>
     <div class="card-body">
         <div class="row">
-            <div class="col-sm-5">
-                <h4 class="card-title mb-0">
-                    @lang('labels.backend.access.users.management')
-                    <small class="text-muted">@lang('labels.backend.access.users.deactivated')</small>
-                </h4>
-            </div>
-            <div class="col-sm-7">
-                @include('backend.auth.user.includes.breadcrumb-links')
-            </div><!--col-->
-        </div><!--row-->
-
-        <div class="row mt-4">
             <div class="col">
                 <div class="table-responsive">
                     <table class="table">

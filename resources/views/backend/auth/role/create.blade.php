@@ -5,19 +5,14 @@
 @section('content')
 {{ html()->form('POST', route('admin.auth.role.store'))->class('form-horizontal')->open() }}
     <div class="card card-primary card-outline">
+        <div class="card-header">
+            <h4 class="card-title">
+                @lang('labels.backend.access.roles.management')
+                <small class="text-muted">@lang('labels.backend.access.roles.create')</small>
+            </h4>
+        </div>
         <div class="card-body">
             <div class="row">
-                <div class="col-sm-5">
-                    <h4 class="card-title mb-0">
-                        @lang('labels.backend.access.roles.management')
-                        <small class="text-muted">@lang('labels.backend.access.roles.create')</small>
-                    </h4>
-                </div><!--col-->
-            </div><!--row-->
-
-            <hr>
-
-            <div class="row mt-4">
                 <div class="col">
                     <div class="form-group row">
                         {{ html()->label(__('validation.attributes.backend.access.roles.name'))

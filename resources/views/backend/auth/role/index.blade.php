@@ -4,20 +4,14 @@
 
 @section('content')
 <div class="card card-primary card-outline">
+    <div class="card-header">
+        <h3 class="card-title">@lang('labels.backend.access.roles.management')</h3>
+        <div class="card-tools">
+            @include('backend.auth.role.includes.header-buttons')
+        </div>
+    </div>
     <div class="card-body">
         <div class="row">
-            <div class="col-sm-5">
-                <h4 class="card-title mb-0">
-                    @lang('labels.backend.access.roles.management')
-                </h4>
-            </div><!--col-->
-
-            <div class="col-sm-7 pull-right">
-                @include('backend.auth.role.includes.header-buttons')
-            </div><!--col-->
-        </div><!--row-->
-
-        <div class="row mt-4">
             <div class="col">
                 <div class="table-responsive">
                     <table class="table">
